@@ -1,0 +1,55 @@
+.login{
+  height: 100vh;
+  background-color: #308475;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form{
+  max-width: 450px;
+  max-height: 516px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+form div{
+  display: flex;
+  flex-direction: column;
+}
+
+form button{
+  margin-top: 25px;
+  background-color: #308475;
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  width: 390px;
+  height: 50px;
+  padding: 15px 0px;
+}
+
+form input {
+  width: 360px;
+  height: 20px;
+  background-color: #E2EEEC;
+  border: 0;
+  border-radius: 10px;
+  padding: 15px;
+  outline: none;
+}
+
+form label{
+  color: #308475;
+}
+
+form a{
+  color: #308475;
+  margin-top: 25px;
+  text-decoration: none;
+}
