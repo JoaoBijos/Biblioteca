@@ -6,6 +6,8 @@ import Logo from "../../assets/logo.png";
 import Lupa from "../../assets/lupa.png";
 import Arrow from '../../assets/arrow.png';
 
+import DropdownMenu from '../dropdownMenu/index';
+
 export default class Header extends Component {
   render() {
     return (
@@ -20,7 +22,7 @@ export default class Header extends Component {
         </div>
         <div className="lado-direito">
           <a>João Pedro</a>
-          <img src={Arrow} />
+          <DropdownMenu/>
         </div>
       </div>
     );
