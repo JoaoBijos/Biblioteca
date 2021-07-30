@@ -4,11 +4,37 @@
 
 .content{
   display: flex;
+  flex-direction: column;
   position: relative;
+  margin-top: 400px;
 }
 
 .content h1{
-  margin-top: 220px;
-  margin-left: 90px;
+  margin-left: 100px;
   color: #308475;
+}
+
+.content img{
+  max-height: 130px;
+  height: 100%;
+  max-width: 100px;
+  width: 100%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.content img:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.rowList{
+  display: flex;
+  flex-direction: column;
+  margin-left: 84px;
+}
+
+.rowList div{
+  display: flex;
 }
