@@ -8,7 +8,7 @@ export default () => {
         <div className='container'>
             <Header/>
             <div className='content'>
-                <h1>Livros Disponíveis</h1>
+                <h1>Meus Livros</h1>
             </div>
         </div>
     )

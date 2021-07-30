@@ -4,7 +4,6 @@ ul {
   padding: 0;
 }
 
-/* <li> */
 .nav-item {
   width: calc(60 * 0.8);
   display: flex;
@@ -16,7 +15,6 @@ ul {
   color: #000;
 }
 
-/* Icon Button */
 .icon-button {
   border-radius: 50%;
   padding: 5px;
@@ -31,19 +29,10 @@ ul {
   filter: brightness(1.2);
 }
 
-.icon-button svg { 
-  fill: var(--text-color);
-  width: 20px;
-  height: 20px;
-}
-
-
-/* Dropdown Menu */
-
 .dropdown {
   position: absolute;
   top: 58px;
-  width: 300px;
+  width: 200px;
   transform: translateX(-45%);
   background-color: #fff;
   border: 0;
@@ -65,14 +54,10 @@ ul {
     border-radius: 10px;
     transition: background 500;
     padding: 0.5rem;
+    cursor: pointer;
 }
 
 .menu a:hover{
   background-color: #30847521;
 }
 
-.menu button{
-  cursor: pointer;
-  background: none;
-  border: 0;
-}

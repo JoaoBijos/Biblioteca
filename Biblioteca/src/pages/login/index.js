@@ -25,6 +25,10 @@ export default () => {
     history.push('/home')
   }
 
+  const goToRegister = () => {
+    history.push('/cadastro')
+  }
+
   return (
     <div className="login">
       <form>
@@ -37,7 +41,7 @@ export default () => {
             name="user"
             onChange={onChange}
             value={values.user}
-            placeholder='Insira seu usuário aqui'
+            placeholder='Insira seu nome aqui'
           />
         </div>
         <div className="form-control">
@@ -52,7 +56,7 @@ export default () => {
           />
         </div>
         <button type="submit" onClick={handleSingIn}>ENTRAR</button>
-        <a href=''>Cadastrar-se</a>
+        <a onClick={goToRegister}>Cadastrar-se</a>
       </form>
     </div>
   );

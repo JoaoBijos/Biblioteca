@@ -49,7 +49,20 @@ form label{
 }
 
 form a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #308475;
   margin-top: 25px;
   text-decoration: none;
+  max-width: 390px;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+form a:hover{
+  background-color: #E2EEEC;
+
 }

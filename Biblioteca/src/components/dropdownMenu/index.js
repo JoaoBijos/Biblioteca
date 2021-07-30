@@ -8,7 +8,6 @@ import Home from '../../assets/Vector.png';
 import Books from '../../assets/books.png';
 import Logout from '../../assets/logout.png';
 
-
 export default () => {
     return (
         <NavItem icon={Arrow}>
@@ -25,7 +24,6 @@ function NavItem(props) {
             <a href="#" className="icon-button" onClick={() => setOpen(!open)}>
                 <img src={Arrow} />
             </a>
-
             {open && props.children}
         </li>
     );
@@ -37,57 +35,34 @@ function DropdownMenu() {
     const dropdownRef = useRef(null);
     const history = useHistory();
 
-    useEffect(() => {
-        setMenuHeight(dropdownRef.current?.firstChild.offsetHeight)
-    }, [])
-
-    function calcHeight(el) {
-        const height = el.offsetHeight;
-        setMenuHeight(height);
-    }
-
     const handleSingIn = () => {
         history.push('/login')
     }
 
+    const navegateTo = () => {
+        history.push('/meuslivros')
+    }
+
+    const goToHome = () => {
+        history.push('/home')
+    }
+
     return (
         <div className="dropdown" style={{ height: menuHeight }} ref={dropdownRef}>
-            <CSSTransition
-                in={activeMenu === 'main'}
-                timeout={500}
-                unmountOnExit
-                onEnter={calcHeight}>
+            <CSSTransition in={activeMenu === 'main'}>
                 <div className="menu">
-                    <a>
-                        <img
-                            src={Home}
-                            style={{
-                                height: 26,
-                                paddingRight: 20
-                            }} />
+                    <a onClick={goToHome}>
+                        <img src={Home} style={{ height: 26, paddingRight: 20 }} />
                         Home
                     </a>
-                    <a>
-                        <img 
-                            src={Books} 
-                            style={{ 
-                                height: 26, 
-                                paddingRight: 20 
-                            }} />
+                    <a onClick={navegateTo}>
+                        <img src={Books} style={{ height: 26, paddingRight: 20 }} />
                         Meus Livros
                     </a>
-                    <button type='submit' onClick={handleSingIn}>
-                        <a>
-                            <img 
-                                src={Logout} 
-                                style={{ 
-                                    height: 26, 
-                                    paddingRight: 20 
-                                }} />
-                            Sair
-                        </a>
-                    </button>
-                    
+                    <a onClick={handleSingIn}>
+                        <img src={Logout} style={{ height: 26, paddingRight: 20 }} />
+                        Sair
+                    </a>
                 </div>
             </CSSTransition>
         </div>
