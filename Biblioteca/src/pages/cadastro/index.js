@@ -22,7 +22,7 @@ export default () => {
   }
 
   const handleSingIn = () => {
-    history.push('/login')
+    history.push('/')
   }
   
   return (
