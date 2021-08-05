@@ -36,7 +36,7 @@ function DropdownMenu() {
     const history = useHistory();
 
     const handleSingIn = () => {
-        history.push('/login')
+        history.push('/')
     }
 
     const navegateTo = () => {

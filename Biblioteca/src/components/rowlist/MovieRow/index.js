@@ -3,9 +3,12 @@ import './style.css';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
+import Modal from '../../modalPegarLivro/index';
+
 export default ({title, items}) =>{
 
     const [scrollX, setScrollX]= useState(0);
+    const [openModal, setOpenModal]= useState(false);
 
     const handleLeftArrow = () => {
         let x = scrollX + Math.round(window.innerWidth / 2);
@@ -26,6 +29,7 @@ export default ({title, items}) =>{
 
     return(
         <div className="movieRow">
+            {openModal && <Modal closeModal={setOpenModal}/>}
             <div className="movieRow-left" onClick={handleLeftArrow}>
                 <NavigateBeforeIcon style={{fontSize:50}} />
             </div>
@@ -40,11 +44,12 @@ export default ({title, items}) =>{
                 }}>
                     {items.results.length > 0 && items.results.map((item, key)=>(
                         <div key={key} className="movieRow--item">    
-                            <img  src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} />
+                            <img onClick={() => setOpenModal(true)} src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} />
                         </div>
                     ))}
                 </div>
             </div>
+           
         </div>
     );
 }

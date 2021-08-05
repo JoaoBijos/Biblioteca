@@ -10,7 +10,8 @@ import Cadastro from '../src/pages/cadastro/index';
 export default () =>{
     return(
         <BrowserRouter>
-        {Route === '/' || '/cadastro' ? null : <Header/>}
+      <Header/>
+        
             <Switch>
                 <Route exact path="/home" component={Home}/>
                 <Route exact path="/meuslivros" component={MeusLivros}/>
